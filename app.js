@@ -68,7 +68,26 @@ console.log(krAge);
 // ## conditionals
 const age1 = prompt("How old are you?");
 console.log(typeof age1, typeof parseInt(age1)); 
-// typeof => 데이터타입 확인 문법
-// parseInt 문자열(숫자) -> 숫자 변환
+// typeof => 타입 확인
+// parseInt => 문자열(숫자)에서 숫자로 타입 변환
 
+console.log(isNaN(age1));
+// 하나의 인자를 주면 number인지 아닌지 가르쳐줌
 
+// not a number인지 알려준다.
+if(isNaN(age1) || age1 < 0){
+    console.log("Please write are real positive number");
+} else if (age1 < 18){
+    console.log("You are too young");
+} else if (age1 >= 18 && age1 <= 50){
+    console.log("You can drink");
+} else if (age1 > 50 && age1 <= 80){
+    console.log("You Should exercise");
+}  else if (age1 > 80){
+    console.log("You can do whatever you want.");
+} else if (age1 !== 100){
+    console.log("wow you are wise");
+}
+
+// AND 연산자
+// OR 연산자
