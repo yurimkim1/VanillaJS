@@ -56,5 +56,19 @@ const calculator = {
 
 calculator.add(5,1);
 
+//## Return
+const age = 30;
+function calculatorKrAge(ageOfForeigner){
+    return ageOfForeigner + 2;
+}
+
+const krAge = calculatorKrAge(age);
+console.log(krAge);
+
+// ## conditionals
+const age1 = prompt("How old are you?");
+console.log(typeof age1, typeof parseInt(age1)); 
+// typeof => 데이터타입 확인 문법
+// parseInt 문자열(숫자) -> 숫자 변환
 
 
