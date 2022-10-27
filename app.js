@@ -1,33 +1,60 @@
-// # chapter 2. 자바스크립트
-// HTML 파일은 브라우저에서 열수있고, HTML 파일을 통해 CSS와 자바스크립트를 가져온다.
-// 고로 index.html 파일만 브라우저에서 열면된다
+// const , let 차이점
+// : 값을 재할당한다면 let, 재할당을 안한다면 const
+// 강사는 쓰지 말라고 했지만 상황에 따라 달라질수 있다.
 
-// 출력 명령어
-console.log(54541);
-console.log("asdassad");
-console.log('sdassad');  // 작은따옴표 사용도 가능
+// ## Arrays
+// arrays 목적
+// 하나의 variable 안에 데이터의 list를 가지는 것
+// array 규칙
+// 1. 시작과 끝에 대괄호를 사용해야한다.
+// 2. array안 각각의 항목은 쉼표로 분리되어야 한다.
+// 3. 무슨 데이터타입이든 넣을수 있다. (number, string, bool, null, ...)
 
-// 변수 선언: const, let 
-let a = 5;
-const myVariableName = "javascript"; // 카멜표기 사용
+// array에서 원하는 아이템 받아오기
+daysOfWeek = ["mon" , "tue" , "web" , "thu" , "fri" , "sat"];
+console.log(daysOfWeek[5]);
 
-console.log(a + b);
+// array 안에 요일 더 추가하기
+daysOfWeek.push("sun");
+console.log(daysOfWeek);
 
-// var도 사용가능 
-// 재선언을 했는데 에러가 나오지 않고 각기 다른 값이 출력됨
-// 보완된 변수 선언 방식 let, const
-var name = 'js'
-console.log(name)
 
-var name = 'javascript'
-console.log(name)
-// 기본적으로 const, 필요할 때만 let, var는 쓰지말자
+// ## Objects
+// 규칙
+// array 차이점은 중괄호를 사용한다.
+// c#의 struct와 비슷하다.
+const player = {
+    name: "nico",
+    points: 10,
+    fat: true,
+}
 
-// 데이터 타입
-number
-string
-boolean
-null과 undefined
-// 차이점 
-// null 값이 정해지지 않은 것
-// undefined란 타입이 정해지지 않은 것
+console.log(player);
+player.fat = false;
+console.log(player);
+
+// const는 수정할 수 없지않나?
+// const 전체를 하나의 값으로서 업데이트할 때 발생
+// objects 안에 있는 property 값 수정 가능
+// player = false; // 에러발생
+
+// ## Functions
+// 코드를 캡슐화해서 실행을 여러번 할 수 있다.
+function sayHello(nameOfPerson, age){
+    console.log("Hello my name is" + nameOfPerson + "and I am" + age);
+}
+
+sayHello("Kim", 20);
+sayHello("Lee", 30);
+
+
+const calculator = {
+    add: function(a, b) {
+        console.log(a, b);
+    },
+};
+
+calculator.add(5,1);
+
+
+
